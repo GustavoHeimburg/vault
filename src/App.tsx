@@ -6,10 +6,10 @@ import {
 
 import MainLayout from "./layouts/MainLayout.tsx";
 
-import Dashboard from "./pages/Dashboard.tsx";
-import Transactions from "./pages/Transactions.tsx";
-import Analytics from "./pages/Analytics.tsx";
-import Settings from "./pages/Settings.tsx";
+import DashboardPage from "./pages/DashboardPage.tsx";
+import TransactionsPage from "./pages/TransactionsPage.tsx";
+import AnalyticsPage from "./pages/AnalyticsPage.tsx";
+import SettingsPage from "./pages/SettingsPage.tsx";
 import React from "react";
 
 export default function App() {
@@ -20,21 +20,21 @@ export default function App() {
 
                 <Route path="/" element={<MainLayout />}>
 
-                    <Route index element={<Dashboard />} />
+                    <Route index element={<DashboardPage />} />
 
                     <Route
                         path="transactions"
-                        element={<Transactions />}
+                        element={<TransactionsPage />}
                     />
 
                     <Route
                         path="analytics"
-                        element={<Analytics />}
+                        element={<AnalyticsPage />}
                     />
 
                     <Route
                         path="settings"
-                        element={<Settings />}
+                        element={<SettingsPage />}
                     />
 
                 </Route>

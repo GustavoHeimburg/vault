@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Settings() {
+export default function TransactionsPage() {
     return (
         <div>
             <h1 className="text-4xl font-bold">
-                Settings
+                Transactions
             </h1>
         </div>
     );

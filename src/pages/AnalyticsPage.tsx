@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Transactions() {
+export default function AnalyticsPage() {
     return (
         <div>
             <h1 className="text-4xl font-bold">
-                Transactions
+                Analytics
             </h1>
         </div>
     );

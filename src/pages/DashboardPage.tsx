@@ -21,10 +21,9 @@ const data = [
     { month: "Jul", value: 7490 },
 ];
 
-export default function Dashboard() {
+export default function DashboardPage() {
     return (
         <>
-            {/* HEADER */}
 
             <div>
                 <h2 className="text-5xl font-bold tracking-tight">
@@ -36,7 +35,6 @@ export default function Dashboard() {
                 </p>
             </div>
 
-            {/* CARDS */}
 
             <div className="grid grid-cols-3 gap-6 mt-10">
 
