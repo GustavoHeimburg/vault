@@ -1,37 +1,26 @@
-import { motion } from "framer-motion";
 import React from "react";
+import Cartao from "../ui/Cartao";
 
 interface StatCardProps {
-    title: string;
-    value: string;
-    icon: React.ReactNode;
+    titulo: string;
+    valor: string;
 }
 
 export default function StatCard({
-                                     title,
-                                     value,
-                                     icon,
+                                     titulo,
+                                     valor,
                                  }: StatCardProps) {
     return (
-        <motion.div
-            whileHover={{ y: -5 }}
-            className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 hover:bg-white/[0.05] transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.03)]"
-        >
+        <Cartao>
+            <div className="flex flex-col gap-2">
+        <span className="text-zinc-400 text-sm">
+          {titulo}
+        </span>
 
-            <div className="flex items-center justify-between">
-
-                <p className="text-zinc-500 text-sm">
-                    {title}
-                </p>
-
-                {icon}
-
+                <h2 className="text-3xl font-bold text-white">
+                    {valor}
+                </h2>
             </div>
-
-            <h3 className="text-4xl font-bold mt-4">
-                {value}
-            </h3>
-
-        </motion.div>
+        </Cartao>
     );
 }
