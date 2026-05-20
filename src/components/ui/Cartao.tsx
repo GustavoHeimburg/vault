@@ -1,27 +1,65 @@
-import React from "react"
+import React from "react";
 
 interface CartaoProps {
-    children: React.ReactNode
+    children: React.ReactNode;
+    className?: string;
 }
 
-export default function Cartao({ children }: CartaoProps) {
+export default function Cartao({
+                                   children,
+                                   className = "",
+                               }: CartaoProps) {
     return (
         <div
-            className="
-        bg-zinc-900/80
-        backdrop-blur-md
-        border
-        border-zinc-800
-        rounded-3xl
-        p-6
-        shadow-xl
-        transition-all
-        duration-300
-        hover:border-zinc-700
-        hover:scale-[1.01]
-      "
+            className={`
+                relative
+                overflow-hidden
+
+                rounded-[32px]
+
+                border
+                border-white/10
+
+                bg-white/[0.03]
+                backdrop-blur-2xl
+
+                p-6
+
+                shadow-[0_0_60px_rgba(255,255,255,0.03)]
+
+                transition-all
+                duration-500
+
+                hover:border-white/20
+                hover:bg-white/[0.05]
+                hover:-translate-y-1
+
+                ${className}
+            `}
         >
-            {children}
+
+            {/* GLOW */}
+
+            <div
+                className="
+                    absolute
+                    top-0
+                    right-0
+                    w-40
+                    h-40
+                    bg-white/[0.03]
+                    rounded-full
+                    blur-3xl
+                    pointer-events-none
+                "
+            />
+
+            {/* CONTENT */}
+
+            <div className="relative z-10">
+                {children}
+            </div>
+
         </div>
-    )
+    );
 }
